@@ -41,3 +41,23 @@ L8 = list(range(x + 1))
 print(L8)
 
 #Criar um array com valores aleatórios
+
+
+
+
+#Acessar elementos por índice
+L9 = [1, 2, 3, 4]
+n = int(input("Qual indice você quer?"))
+print(L9[n])
+
+#Percorrer os elementos utilizando for-range
+L10 = [5, 6, 7, 8]
+for i in L10:
+    print(L10)
+
+#Percorrer os elementos utilizando for indexado
+L11 = [9, 10, 11, 12]
+for i in range(len(L11)):
+    print(L11)
+
+#Procurar um elemento X usando laço
