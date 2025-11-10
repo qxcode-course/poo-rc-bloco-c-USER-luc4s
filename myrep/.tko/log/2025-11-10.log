@@ -15,3 +15,4 @@
 2025-11-10 19:08:24, MOVE, v:1, k:poo@budega, mode:PICK
 2025-11-10 19:08:25, EXEC, v:1, k:poo@budega, mode:FULL, rate:100
 2025-11-10 19:08:29, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-10 19:27:29, SELF, v:1, k:poo@budega, rate:100, human:sim, iagen:nao, guide:sim, other:nao, alone:7, study:120
