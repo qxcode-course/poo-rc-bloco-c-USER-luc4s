@@ -12,13 +12,14 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-11-05 23:48:28'
+  cache_timestamp: '2025-11-10 18:20:23'
   filters:
   - listas
 expanded:
 - poo@campanha-principal
 - poo@bloco_c-listas
-tasks: {}
+tasks:
+  poo@budega: '{rate:100, human:sim, iagen:nao, guide:sim, other:nao, alone:7, study:90}'
 flags:
   quests: 0
   tracks: 0

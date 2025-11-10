@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-10_18-20-32",
+            "content": "@@ -1560,13 +1560,38 @@\n %5D))%0A        \n+elif args%5B0%5D == %22arrive%22:\n %0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-11-10_18-21-08",
+            "content": "@@ -1325,20 +1325,25 @@\n antil = \n-None\n+Mercantil\n %0A    whi\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-11-10_18-23-43",
+            "content": "@@ -1555,44 +1555,8 @@\n %5D))%0A\n-        elif args%5B0%5D == %22arrive%22:%0A%0A%0A\n     \n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-11-10_18-41-56",
+            "content": "@@ -1590,150 +1590,8 @@\n %22:%0A%0A\n-        elif args%5B0%5D == %22call%22:%0A            %0A        elif args%5B0%5D == %22finish%22:%0A%0A        elif args%5B0%5D == %22show%22:%0A            print(%22mercantil%22)\n %0A   \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-10_18-44-43",
+            "content": "@@ -1589,279 +1589,88 @@\n e%22:%0A\n-            nome = args%5B1%5D%0A            mercantil.arrive(Pessoa(nome))%0A        elif args%5B0%5D == %22call%22:%0A            index = int(args%5B1%5D)%0A            mercantil.call(index)%0A        elif args%5B0%5D == %22finish%22:%0A            index = int(args%5B1%5D)%0A            mercantil.finish(index)\n+%0A        elif args%5B0%5D == %22call%22:%0A            %0A        elif args%5B0%5D == %22finish%22:%0A\n %0A   \n@@ -1729,14 +1729,17 @@\n antil%22)%0A\n-main()\n+        %0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-11-10_18-50-21",
+            "content": "@@ -1907,16 +1907,17 @@\n   print(\n+%22\n mercanti\n@@ -1917,16 +1917,17 @@\n ercantil\n+%22\n )%0Amain()\n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-11-10_18-51-11",
+            "content": "@@ -641,16 +641,17 @@\n aixa%7D%5D%5Cn\n+ \n Espera: \n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-11-10_18-52-07",
+            "content": "@@ -943,109 +943,8 @@\n es%22)\n-%0A        else:%0A            cliente = self.fila_espera.pop(0)%0A            self.caixas%5Bindex%5D = cliente\n %0A%0A  \n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-11-10_18-54-13",
+            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self._nome: str = nome\n    \n    def getNome(self):\n        return self._nome\n\n    def __str__(self):\n        return self._nome\n\nclass Mercantil:\n    def __init__(self, quantidade_caixas: int):\n        self.caixas: list[Pessoa | None] = []\n        self.fila_espera: list[Pessoa] = []\n        for _ in range(quantidade_caixas):\n            self.caixas.append(None)\n\n    def __str__(self):\n        caixa = \", \".join([str(cliente) if cliente else \"-----\" for cliente in self.caixas])\n        espera = \", \".join([str(cliente) for cliente in self.fila_espera])\n        return f\"Caixas: [{caixa}]\\nEspera: [{espera}]\"\n    \n    def arrive(self, pessoa: Pessoa):\n        self.fila_espera.append(pessoa)\n    \n    def call(self, index: int):\n        if self.caixas[index] is not None:\n            print(\"fail: caixa ocupado\")\n        elif not self.fila_espera:\n            print(\"fail: sem clientes\")\n        else:\n            cliente = self.fila_espera.pop(0)\n            self.caixas[index] = cliente\n\n    def finish(self, index: int):\n        if index < 0 or index >= len(self.caixas):\n            print(\"fail: caixa inexistente\")\n            return None\n        if self.caixas[index] is None:\n            print(\"fail: caixa vazio\")\n            return None\n        cliente = self.caixas[index]\n        self.caixas[index] = None\n        return cliente\n    \ndef main():\n    mercantil = None\n    while True:\n        line = input()\n        print(f\"${line}\")\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            mercantil = Mercantil(int(args[1]))\n        elif args[0] == \"arrive\":\n            nome = args[1]\n            mercantil.arrive(Pessoa(nome))\n        elif args[0] == \"call\":\n            index = int(args[1])\n            mercantil.call(index)\n        elif args[0] == \"finish\":\n            index = int(args[1])\n            mercantil.finish(index)\n        elif args[0] == \"show\":\n            print(mercantil)\nmain()",
+            "lines": "68"
+        }
+    ]
+}
