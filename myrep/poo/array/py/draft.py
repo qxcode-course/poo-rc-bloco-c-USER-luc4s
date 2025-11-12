@@ -113,3 +113,8 @@ else:
     print("Elemento nao encontrado")
 
 # Remover todos os elementos com valor X da lista
+L18 = [20, 30, 40, 50]
+x = int(input())
+L18.remove(x)
+print(L18)
+
