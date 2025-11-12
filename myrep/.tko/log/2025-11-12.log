@@ -1,3 +1,5 @@
 2025-11-12 13:31:28, MOVE, v:1, k:poo@array, mode:PICK
 2025-11-12 13:31:29, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:120
 2025-11-12 13:31:44, MOVE, v:1, k:poo@array, mode:BACK
+2025-11-12 13:37:56, SELF, v:1, k:poo@array, rate:100, human:sim, iagen:nao, guide:sim, other:nao, alone:6, study:120
+2025-11-12 13:38:14, SELF, v:1, k:poo@budega, rate:100, human:sim, iagen:nao, guide:sim, other:nao, alone:7, study:150
