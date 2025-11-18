@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-18_13-06-38",
+            "content": "@@ -106,123 +106,8 @@\n     \n-%0A\n     \n-def getAge(self) -%3E int:%0A        return self.__age%0A    %0A    def getName(self) -%3E str:%0A        return self.__name%0A%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2025-11-18_13-17-35",
+            "content": "@@ -225,111 +225,4 @@\n me%0A%0A\n-    def setAge(self, age: int) -%3E None:%0A        return self.__age%0A    def __str__(self):%0A        return f%22%22\n",
+            "lines": "11"
+        },
+        {
+            "label": "2025-11-18_13-26-45",
+            "content": "@@ -331,35 +331,5 @@\n n f%22\n-%7Bself.__age%7D%7Bself.__name%7D%22%0A    \n+%22\n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-11-18_13-46-04",
+            "content": "@@ -291,66 +291,8 @@\n age%0A\n-    def setName(self, name: str) -%3E None:%0A        return %0A\n     \n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-18_13-49-30",
+            "content": "@@ -397,17 +397,16 @@\n f.__age%7D\n-:\n %7Bself.__\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-11-18_14-25-45",
+            "content": "@@ -258,14 +258,8 @@\n ) -%3E\n- int %7C\n  Non\n@@ -326,14 +326,8 @@\n ) -%3E\n- str %7C\n  Non\n@@ -348,24 +348,8 @@\n urn \n-self.__name%0A    \n %0A   \n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-11-18_14-36-28",
+            "content": "class Kid:\n    def __init__(self, age: int, name: str):\n        self.__age: int\n        self.__name: str\n    \n    def getAge(self) -> int:\n        return self.__age\n    \n    def getName(self) -> str:\n        return self.__name\n\n    def setAge(self, age: int) -> int | None:\n        return self.__age\n    def setName(self, name: str) -> str | None:\n        return self.__name\n    \n    def __str__(self):\n        return f\"{self.__age}:{self.__name}\"\n    ",
+            "lines": "19"
+        }
+    ]
+}

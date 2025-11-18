@@ -15,7 +15,6 @@ class Grafite:
         if self.__size < 0:
             self.__size = 0
     def usagePerSheet(self):
-    
         return 4
     def __str__(self):
         return f"[{self.__calibre}:{self.__dureza}:{self.__size}]"
