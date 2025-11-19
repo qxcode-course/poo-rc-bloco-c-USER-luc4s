@@ -32,8 +32,18 @@
         },
         {
             "label": "2025-11-18_14-36-28",
-            "content": "class Kid:\n    def __init__(self, age: int, name: str):\n        self.__age: int\n        self.__name: str\n    \n    def getAge(self) -> int:\n        return self.__age\n    \n    def getName(self) -> str:\n        return self.__name\n\n    def setAge(self, age: int) -> int | None:\n        return self.__age\n    def setName(self, name: str) -> str | None:\n        return self.__name\n    \n    def __str__(self):\n        return f\"{self.__age}:{self.__name}\"\n    ",
+            "content": "@@ -255,16 +255,21 @@\n int) -%3E \n+int %7C\n  None:%0A \n@@ -267,32 +267,39 @@\n %7C None:%0A        \n+return \n self.__age = age\n@@ -296,15 +296,8 @@\n _age\n- = age%0A\n %0A   \n@@ -328,16 +328,22 @@\n  str) -%3E\n+ str %7C\n  None:%0A \n@@ -353,22 +353,22 @@\n     \n+return \n self.__\n-name = \n name\n@@ -449,78 +449,4 @@\n     \n-%0Aclass Trampoline:%0A    def __init__(self):%0A        self.playing: list(Kid)\n",
             "lines": "19"
+        },
+        {
+            "label": "2025-11-19_14-04-19",
+            "content": "@@ -501,135 +501,15 @@\n ying\n- = %5B%5D%0A        self.waiting = %5B%5D%0A%0A    def removeFromList(name: str, list_kid: list) -%3E kid %7C None:%0A        for i, Kid in enumerate(\n+: list(Kid\n )\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-19_14-41-00",
+            "content": "class Kid:\n    def __init__(self, age: int, name: str):\n        self.__age: int\n        self.__name: str\n    \n    def getAge(self) -> int:\n        return self.__age\n    \n    def getName(self) -> str:\n        return self.__name\n\n    def setAge(self, age: int) ->  None:\n        self.__age = age\n\n    def setName(self, name: str) -> None:\n        self.__name = name\n    \n    def __str__(self):\n        return f\"{self.__age}:{self.__name}\"\n    \nclass Trampoline:\n    def __init__(self):\n        self.playing = []\n        self.waiting = []\n\n    def removeFromList(name: str, list_kid: list) -> kid | None:\n        for i, Kid in enumerate()",
+            "lines": "27"
         }
     ]
 }
